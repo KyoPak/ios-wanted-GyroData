@@ -21,5 +21,9 @@ final class CoreDataManagerTests: XCTestCase {
         // then
         XCTAssertNoThrow(try coreDataManager?.save(measureData))
     }
-
+    
+    func test_fetch_seuccess() {
+        // then
+        XCTAssertNoThrow(try coreDataManager?.fetch(offset: 0, limit: 1))
+    }
 }

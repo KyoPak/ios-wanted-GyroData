@@ -42,14 +42,15 @@ final class CoreDataManagerMock: CoreDataRepository {
 
 extension CoreDataManagerMock {
     func save(_ model: MeasureData) throws {
+        guard let type = model.type?.rawValue else { throw CoreDataError.invalidData }
         let content = SensorData(context: self.context)
         
-        content.setValue(model.xValue, forKey: "xValue")
-        content.setValue(model.yValue, forKey: "yValue")
-        content.setValue(model.zValue, forKey: "zValue")
-        content.setValue(model.date, forKey: "date")
-        content.setValue(model.runTime, forKey: "runTime")
-        content.setValue(model.type?.rawValue, forKey: "type")
+        content.xValue = model.xValue
+        content.yValue = model.yValue
+        content.zValue = model.zValue
+        content.date = model.date
+        content.runTime = model.runTime
+        content.type = Int16(type)
         
         do {
             try context.save()
