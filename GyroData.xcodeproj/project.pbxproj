@@ -34,6 +34,8 @@
 		AC52BAEB2988D3DC0057CA56 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAC729880B770057CA56 /* CoreDataError.swift */; };
 		AC52BAEC2988D3E10057CA56 /* MeasureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAAB2987E9930057CA56 /* MeasureData.swift */; };
 		AC52BAED2988D3E30057CA56 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAAF2987E9D10057CA56 /* Sensor.swift */; };
+		AC52BAF92988E7AC0057CA56 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */; };
+		AC52BAFA2988E7AC0057CA56 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		AC52BADF2988D3410057CA56 /* CoreDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerMock.swift; sourceTree = "<group>"; };
 		AC52BAE12988D35C0057CA56 /* FileSystemManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManagerMock.swift; sourceTree = "<group>"; };
 		AC52BAE42988D3C30057CA56 /* FileSystemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManagerTests.swift; sourceTree = "<group>"; };
+		AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 		AC52BAA82987E8F80057CA56 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AC52BAF62988E7800057CA56 /* Interfaces */,
 				AC52BAAA2987E9380057CA56 /* Entities */,
 				AC52BAAD2987E9C60057CA56 /* TransactionService.swift */,
 			);
@@ -245,6 +249,22 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		AC52BAF62988E7800057CA56 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AC52BAF72988E78A0057CA56 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		AC52BAF72988E78A0057CA56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,6 +372,7 @@
 				63F01BB728D44FC400C53A39 /* SceneDelegate.swift in Sources */,
 				AC52BAC52987F91A0057CA56 /* SensorData+CoreDataProperties.swift in Sources */,
 				AC52BAAE2987E9C60057CA56 /* TransactionService.swift in Sources */,
+				AC52BAF92988E7AC0057CA56 /* CoreDataRepository.swift in Sources */,
 				AC52BAC42987F91A0057CA56 /* SensorData+CoreDataClass.swift in Sources */,
 				AC52BAB22987EA180057CA56 /* CoreDataManager.swift in Sources */,
 				AC52BAAC2987E9930057CA56 /* MeasureData.swift in Sources */,
@@ -368,6 +389,7 @@
 			files = (
 				AC52BAE72988D3CC0057CA56 /* CoreDataManager.swift in Sources */,
 				AC52BAED2988D3E30057CA56 /* Sensor.swift in Sources */,
+				AC52BAFA2988E7AC0057CA56 /* CoreDataRepository.swift in Sources */,
 				AC52BAEA2988D3DA0057CA56 /* FileSystemError.swift in Sources */,
 				AC52BAEC2988D3E10057CA56 /* MeasureData.swift in Sources */,
 				AC52BAE62988D3C90057CA56 /* FileSystemManager.swift in Sources */,

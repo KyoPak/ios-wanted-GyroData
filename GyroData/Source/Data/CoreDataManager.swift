@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-final class CoreDataManager {
+final class CoreDataManager: CoreDataRepository {
     private let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "SensorData")
         container.loadPersistentStores { _, error in
@@ -67,10 +67,10 @@ extension CoreDataManager {
         }
     }
     
-    func delete(_ model: MeasureData) throws {
+    func delete(_ date: Date) throws {
         let request = SensorData.fetchRequest()
         
-        request.predicate = NSPredicate(format: "date == %@", model.date as CVarArg)
+        request.predicate = NSPredicate(format: "date == %@", date as CVarArg)
         
         do {
             let result = try context.fetch(request)
