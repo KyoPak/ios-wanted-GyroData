@@ -43,7 +43,7 @@ extension CoreDataManager {
         content.setValue(model.zValue, forKey: "zValue")
         content.setValue(model.date, forKey: "date")
         content.setValue(model.runTime, forKey: "runTime")
-        content.setValue(model.type, forKey: "type")
+        content.setValue(model.type?.rawValue, forKey: "type")
         
         do {
             try context.save()

@@ -5,6 +5,7 @@
 //  Created by Kyo, JPush on 2023/01/31.
 //
 
+import CoreData
 import Foundation
 
 final class CoreDataManagerMock: CoreDataRepository {
@@ -48,7 +49,7 @@ extension CoreDataManagerMock {
         content.setValue(model.zValue, forKey: "zValue")
         content.setValue(model.date, forKey: "date")
         content.setValue(model.runTime, forKey: "runTime")
-        content.setValue(model.type, forKey: "type")
+        content.setValue(model.type?.rawValue, forKey: "type")
         
         do {
             try context.save()
@@ -75,7 +76,7 @@ extension CoreDataManagerMock {
     func delete(_ date: Date) throws {
         let request = SensorData.fetchRequest()
         
-        request.predicate = NSPredicate(format: "date == %@", model.date as CVarArg)
+        request.predicate = NSPredicate(format: "date == %@", date as CVarArg)
         
         do {
             let result = try context.fetch(request)

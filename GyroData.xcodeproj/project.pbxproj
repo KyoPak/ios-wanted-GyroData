@@ -25,7 +25,6 @@
 		AC52BADB2988D29A0057CA56 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BADA2988D29A0057CA56 /* CoreDataManagerTests.swift */; };
 		AC52BAE02988D3410057CA56 /* CoreDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BADF2988D3410057CA56 /* CoreDataManagerMock.swift */; };
 		AC52BAE22988D35C0057CA56 /* FileSystemManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAE12988D35C0057CA56 /* FileSystemManagerMock.swift */; };
-		AC52BAE52988D3C30057CA56 /* FileSystemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAE42988D3C30057CA56 /* FileSystemManagerTests.swift */; };
 		AC52BAE62988D3C90057CA56 /* FileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAB32987EA2A0057CA56 /* FileSystemManager.swift */; };
 		AC52BAE72988D3CC0057CA56 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAB12987EA180057CA56 /* CoreDataManager.swift */; };
 		AC52BAE82988D3D50057CA56 /* SensorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAC22987F91A0057CA56 /* SensorData+CoreDataClass.swift */; };
@@ -36,6 +35,8 @@
 		AC52BAED2988D3E30057CA56 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAAF2987E9D10057CA56 /* Sensor.swift */; };
 		AC52BAF92988E7AC0057CA56 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */; };
 		AC52BAFA2988E7AC0057CA56 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */; };
+		AC52BAFD2988EF900057CA56 /* MeasureDataDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAFC2988EF900057CA56 /* MeasureDataDummy.swift */; };
+		AC52BAFF2988F1EC0057CA56 /* FileSystemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52BAFE2988F1EC0057CA56 /* FileSystemManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +71,9 @@
 		AC52BADA2988D29A0057CA56 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
 		AC52BADF2988D3410057CA56 /* CoreDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerMock.swift; sourceTree = "<group>"; };
 		AC52BAE12988D35C0057CA56 /* FileSystemManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManagerMock.swift; sourceTree = "<group>"; };
-		AC52BAE42988D3C30057CA56 /* FileSystemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManagerTests.swift; sourceTree = "<group>"; };
 		AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		AC52BAFC2988EF900057CA56 /* MeasureDataDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureDataDummy.swift; sourceTree = "<group>"; };
+		AC52BAFE2988F1EC0057CA56 /* FileSystemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		AC52BADD2988D2D40057CA56 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AC52BAFB2988EF260057CA56 /* Dummy */,
 				AC52BADE2988D2D90057CA56 /* Mock */,
 			);
 			path = Common;
@@ -205,7 +208,7 @@
 		AC52BAE32988D3630057CA56 /* FileSystemManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC52BAE42988D3C30057CA56 /* FileSystemManagerTests.swift */,
+				AC52BAFE2988F1EC0057CA56 /* FileSystemManagerTests.swift */,
 			);
 			path = FileSystemManagerTests;
 			sourceTree = "<group>";
@@ -263,6 +266,14 @@
 				AC52BAF82988E7AC0057CA56 /* CoreDataRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AC52BAFB2988EF260057CA56 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				AC52BAFC2988EF900057CA56 /* MeasureDataDummy.swift */,
+			);
+			path = Dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,13 +403,14 @@
 				AC52BAFA2988E7AC0057CA56 /* CoreDataRepository.swift in Sources */,
 				AC52BAEA2988D3DA0057CA56 /* FileSystemError.swift in Sources */,
 				AC52BAEC2988D3E10057CA56 /* MeasureData.swift in Sources */,
+				AC52BAFD2988EF900057CA56 /* MeasureDataDummy.swift in Sources */,
 				AC52BAE62988D3C90057CA56 /* FileSystemManager.swift in Sources */,
 				AC52BAE02988D3410057CA56 /* CoreDataManagerMock.swift in Sources */,
 				AC52BADB2988D29A0057CA56 /* CoreDataManagerTests.swift in Sources */,
 				AC52BAE82988D3D50057CA56 /* SensorData+CoreDataClass.swift in Sources */,
+				AC52BAFF2988F1EC0057CA56 /* FileSystemManagerTests.swift in Sources */,
 				AC52BAE92988D3D70057CA56 /* SensorData+CoreDataProperties.swift in Sources */,
 				AC52BAEB2988D3DC0057CA56 /* CoreDataError.swift in Sources */,
-				AC52BAE52988D3C30057CA56 /* FileSystemManagerTests.swift in Sources */,
 				AC52BAE22988D35C0057CA56 /* FileSystemManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +624,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "GyroDataTests/GyroDataTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -641,7 +653,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "GyroDataTests/GyroDataTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GyroData.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GyroData";
