@@ -22,8 +22,13 @@ final class CoreDataManagerTests: XCTestCase {
         XCTAssertNoThrow(try coreDataManager?.save(measureData))
     }
     
-    func test_fetch_seuccess() {
+    func test_fetch_success() {
         // then
         XCTAssertNoThrow(try coreDataManager?.fetch(offset: 0, limit: 1))
+    }
+    
+    func test_delete_failure_by_nowDate() {
+        // then
+        XCTAssertThrowsError(try coreDataManager?.delete(Date()))
     }
 }
